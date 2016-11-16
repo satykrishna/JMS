@@ -1,0 +1,18 @@
+2016-11-16 14:22:50 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 14:23:21 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 14:43:32 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 14:51:09 WARN  FailoverTransport:280 - Transport (tcp://localhost:61616) failed , attempting to automatically reconnect: java.io.EOFException
+2016-11-16 14:51:09 WARN  FailoverTransport:280 - Transport (tcp://localhost:61616) failed , attempting to automatically reconnect: java.io.EOFException
+2016-11-16 14:51:19 WARN  FailoverTransport:1100 - Failed to connect to [tcp://localhost:61616] after: 10 attempt(s) continuing to retry.
+2016-11-16 14:51:30 INFO  FailoverTransport:1054 - Successfully reconnected to tcp://localhost:61616
+2016-11-16 14:59:50 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 15:02:51 WARN  FailoverTransport:280 - Transport (tcp://localhost:61616) failed , attempting to automatically reconnect: java.io.EOFException
+2016-11-16 15:03:01 WARN  FailoverTransport:1100 - Failed to connect to [tcp://localhost:61616] after: 10 attempt(s) continuing to retry.
+2016-11-16 15:06:08 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 15:08:59 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 15:11:50 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 15:14:51 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 15:15:12 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 15:18:10 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 15:26:10 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 15:27:36 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616

@@ -1,0 +1,37 @@
+2016-11-16 07:20:56 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 07:57:20 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 07:57:42 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 12:40:14 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 12:48:48 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 12:53:17 WARN  FailoverTransport:280 - Transport (tcp://localhost:61616) failed , attempting to automatically reconnect: java.io.EOFException
+2016-11-16 12:53:17 WARN  FailoverTransport:280 - Transport (tcp://localhost:61616) failed , attempting to automatically reconnect: java.io.EOFException
+2016-11-16 13:12:25 WARN  FailoverTransport:1100 - Failed to connect to [tcp://localhost:61616] after: 10 attempt(s) continuing to retry.
+2016-11-16 13:13:10 WARN  FailoverTransport:1100 - Failed to connect to [tcp://localhost:61616] after: 10 attempt(s) continuing to retry.
+2016-11-16 13:15:01 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 13:15:16 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 13:15:23 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 13:16:20 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 13:24:27 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 13:27:55 INFO  FailoverTransport:1065 - Successfully connected to tcp://localhost:61616
+2016-11-16 13:28:15 INFO  FailoverTransport:1065 - Successfully connected to tcp://localhost:61616
+2016-11-16 13:29:31 INFO  FailoverTransport:1065 - Successfully connected to tcp://localhost:61616
+2016-11-16 13:35:30 INFO  FailoverTransport:1065 - Successfully connected to tcp://localhost:61616
+2016-11-16 13:43:21 INFO  FailoverTransport:1065 - Successfully connected to tcp://localhost:61616
+2016-11-16 13:45:13 WARN  FailoverTransport:267 - Transport (tcp://localhost/127.0.0.1:61616@54849) failed, attempting to automatically reconnect
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:258)
+	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:221)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:213)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:196)
+	at java.lang.Thread.run(Thread.java:745)
+2016-11-16 13:45:28 WARN  FailoverTransport:1119 - Failed to connect to [tcp://localhost:61616] after: 10 attempt(s) continuing to retry.
+2016-11-16 13:48:09 WARN  FailoverTransport:1100 - Failed to connect to [tcp://localhost:61616] after: 10 attempt(s) continuing to retry.
+2016-11-16 13:48:41 WARN  FailoverTransport:1100 - Failed to connect to [tcp://localhost:61616] after: 10 attempt(s) continuing to retry.
+2016-11-16 13:49:05 INFO  FailoverTransport:1067 - Successfully reconnected to tcp://localhost:61616
+2016-11-16 13:49:15 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 13:49:17 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 13:50:03 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 14:11:29 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 14:20:43 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-16 14:21:49 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616

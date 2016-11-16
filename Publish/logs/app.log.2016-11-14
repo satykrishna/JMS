@@ -1,0 +1,2 @@
+2016-11-14 11:47:49 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
+2016-11-14 11:52:27 INFO  FailoverTransport:1052 - Successfully connected to tcp://localhost:61616
