@@ -15,42 +15,24 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.activemq</groupId>
-			<artifactId>activemq-all</artifactId>
-			<exclusions>
-            <exclusion>                 
-              <artifactId>org.slf4j</artifactId>
-              <groupId>slf4j-log4j12</groupId>
-            </exclusion>
-            <exclusion>                 
-              <artifactId>log4j</artifactId>
-              <groupId>log4j</groupId>
-            </exclusion>
-        </exclusions>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
-	   <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-api</artifactId>
-        <version>1.5.6</version>
-    </dependency>     
-                        
-    <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-simple</artifactId>
-        <version>1.5.6</version>
-    </dependency>
-
-    <dependency>
-    	<groupId>example.jms.tutorial</groupId>
-    	<artifactId>Communication</artifactId>
-    	<version>0.0.1-SNAPSHOT</version>
+	<dependency>
+		<groupId>example.jms.tutorial</groupId>
+		<artifactId>Chat</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+	<dependency>
+    <groupId>org.apache.activemq</groupId>
+    <artifactId>activemq-all</artifactId>
+  </dependency>
+  <dependency>
+    <groupId>example.jms.tutorial</groupId>
+    <artifactId>Chat</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </dependency>
+  <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
     </dependency>
 	</dependencies>
 </project>
