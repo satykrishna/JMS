@@ -1,2 +1,6 @@
 .project
 .settings
+Publish/logs/Publish.log
+Publish/target/classes/META-INF/maven/example.jms.publish/Publish/pom.properties
+Consume/logs/*
+Publish/logs/*

@@ -9,6 +9,7 @@ import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.ActiveMQTopicPublisher;
 import org.apache.activemq.ActiveMQTopicSession;
+import org.apache.activemq.broker.PublishedAddressPolicy.PublishedHostStrategy;
 import org.apache.activemq.command.ActiveMQObjectMessage;
 import org.apache.activemq.command.ActiveMQTopic;
 import org.apache.log4j.Logger;
@@ -63,95 +64,19 @@ public class MyTopicPublisher {
     System.out.println("====================================");
     System.out.println("WELCOME TO MY MESSAGING SYSTEM");
     System.out.println("====================================");
-    System.out.println("1. Type 'CREATE' to either create/switch to new Topic\n" + "2. Type 'EXIT' to close");
-    takeInputs();
+    System.out.println("1. Type '1' to either create/switch to new Topic\n" + "2. Type 'EXIT' to close");
   }
 
-  private void takeInputs() throws JMSException {
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("\n Enter your choice : ");
-    boolean invalidOption = false;
-    while (true) {
-      String option = scanner.nextLine();
-      if (option.length() == 0) {
-        logger.error("invalid option choosed");
-        invalidOption = true;
-        break;
-      }
-
-      else if (option.equalsIgnoreCase("EXIT")) {
-        logger.info("Thanks for connecting to my messaging system.. GoodBye!!!");
-        break;
-      }
-
-      else if (option.equalsIgnoreCase("CREATE")) {
-        close();
-
-        while (true) {
-          System.out.println("Enter the new/existing topic : ");
-          String topicName = scanner.nextLine();
-          if (topicName.length() != 0) {
-            connectToAMQ(topicName);
-            publishMessages();
-            break;
-          }
-        }
-      }
-      else {
-        invalidOption = true;
-        break;
-      }
-    }
-
-    if (invalidOption) {
-      logger.info("invalid option");
-      showMenu();
-    }
-
-    scanner.close();
-  }
-
-  private void publishMessages() throws JMSException {
-
-    System.out.println("Type Q to stop publishing to this Topic");
-     Scanner scanner = new Scanner(System.in);
-    
-    while (true) {
-      System.out.println("Enter message Id:  ");
-      int messageId = Integer.MIN_VALUE;
-      try {
-        String in = scanner.nextLine();
-        if (in.equalsIgnoreCase("Q")) {
-          break;
-        }
-        int id = Integer.parseInt(in);
-        messageId = id;
-      }
-      catch (Exception exception) {
-        logger.warn("Invalid message id entered and hence assigning it a default value");
-      }
-      String text=null;
-     l2: while (true) {
-        System.out.println("Enter a valid message ---<TYPE Q to QUIT>---- : ");
-        text = scanner.nextLine();
-        if (text.equalsIgnoreCase("Q")) {
-          break;
-        }
-        if(text.length() != 0) {
-          MyMessage subject = new MyMessage(messageId, text);
-          post(subject);
-          break l2;
-        }
-      }
-    }
-    scanner.close();
-    showMenu();
-  }
 
   public static void main(String[] args) throws JMSException {
 
     MyTopicPublisher publisherClient = new MyTopicPublisher();
     publisherClient.showMenu();
+    publisherClient.connectToAMQ("AMQ");
+    for(int i = 0; i < 100; i++) {
+      publisherClient.post(new MyMessage(i, "Text"+i));
+    }
+    publisherClient.close();
   }
 
 }
